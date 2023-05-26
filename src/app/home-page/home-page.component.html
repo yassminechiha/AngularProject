@@ -1,0 +1,81 @@
+<app-navbar-employee></app-navbar-employee>
+<br>
+<div class="container mt-5" >
+  <div class="row">
+    <div class="col-md-4 blog">
+      <div class="card  entry mt-2" id="profil">
+        <div class=" card-header"  style="background-color: #4154f1; color:white;  " >Profile card</div>
+        <img [src]="this.employe?.photo" class="card-img-top mt-5" id="imgProfil" alt="Profile picture">
+        <div class="card-body">
+          <h5 class="card-title" id="nom">{{ this.employe?.name }}</h5>
+          <h5><span id="statut" class="badge bg-info">{{ this.employe?.title }}</span></h5>
+          <ul class="mt-5 detailsprofile " style=" list-style: none;  font-size: 0.8rem;
+          letter-spacing: 0.1rem;">
+            <li >
+              <a [href]="'mailto:' + this.employe?.email">
+                <img class="icon" src="../../assets/icons8-mail-50.png" alt="Email icon">
+                {{ this.employe?.email }}
+              </a>
+            </li>
+            <li class="mt-4">
+              <a [href]="'tel:' + this.employe?.mobile">
+                <img class="icon" src="../../assets/icons8-tel-58.png" alt="Telephone icon">
+                {{ this.employe?.mobile }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+    
+      <div *ngIf="projetsData.length > 0">
+        <div class="row blog">
+    
+              <article class="entry" *ngFor="let projet of projetsData; let i = index;">
+
+              
+  
+                <h2 class="entry-title">
+                  <a >{{ projet.proj_name }}</a>
+                </h2>
+  
+                <div class="entry-meta">
+                  <ul>
+                    <li class="d-flex align-items-center bg bg-info rounded text-white">{{ projet.status }}</li>
+                   
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> {{ projet.start_date }}</li>
+          
+                  </ul>
+                  <br>
+                  <ul>    <li class="d-flex align-items-center mt"><div *ngIf="projet.team.length > 0">
+                      
+                    <div class="mt-1" style="display:flex;">
+                    <div *ngFor="let photo of photosByProject[i]">
+                    
+                      <img [src]="photo" alt="Team photo"[style.display]="'block'">
+                       
+                        
+                    </div>
+                  </div>
+                  </div></li></ul>
+                </div>
+  
+                <div class="entry-content">
+                  <p>{{projet.desc}}
+                   </p>
+                  <div class="read-more">
+                    <a [routerLink]="['../', email, 'DetailsProjet', projet.id]">Read More</a>
+                  </div>
+                </div>
+  
+              </article>
+         
+          </div>
+     
+    
+    </div>
+    
+</div>
+</div>
+</div>

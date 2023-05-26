@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<section id="team" class="team">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Employees</h2>
+      <p>Our hard working employees</p>
+    </header>
+
+    <div class="row " >
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" *ngFor="let employ of employes">
+        <div class="member">
+          <div class="member-img">
+            <img [src]="employ.photo" class="img-fluid" alt="" style="max-width: auto; max-height: auto; object-fit: cover;">
+
+          </div>
+          <div class="member-info">
+            <h4>{{employ.name}}</h4>
+            <span>{{employ.title}}</span>
+            <p>{{employ.email}}| {{employ.mobile}}</p>
+          </div>
+          <div class="social">
+            <div class="row justify-content-center user-social-link">
+              <div class="col-auto"><a class="btn btn-custom btn-sm" (click)="clickDeleteEmployee(employ.id?.toString())"><i class="fa fa-trash"></i></a></div>
+            </div>
+            <div class="row justify-content-center user-social-link">
+              <div class="col-auto"><a routerLink="../edit/{{employ.id}}"><i class="fa fa-pencil"  ></i></a></div>
+            </div>
+          </div>
+          
+          
+          
+          
+        </div>
+        
+        
+        
+      </div>
+      </div>
+
+      
+
+  </div>
+
+</section>
+<!-- End Team Section -->

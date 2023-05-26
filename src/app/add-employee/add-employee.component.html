@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link active ms-0" >Profile</a>
+
+    </nav>
+    <hr class="mt-0 mb-4">
+    
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-header">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-fluid mb-2" style="height: 15rem; width:15rem;" [src]="employe.photo" alt="">
+                    <!-- Profile picture help block-->
+                    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+          
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                <div class="card-header">Account Details</div>
+                <div class="card-body">
+                    <form (submit)="createSubmit()">
+                        <!-- Form Group (username)-->
+                        <div class="mb-3">
+                            <label  class="small mb-1" for="inputUsername">Name </label>
+                            <input [(ngModel)]="employe.name" name="name" class="form-control" id="inputUsername" type="text" placeholder="Enter name">
+                        </div>
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (phone number)-->
+                            <div class="col-md-6">
+                                
+                                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                                    <input [(ngModel)]="employe.email" name="email"class="form-control" id="inputEmailAddress" type="email" placeholder="Enter  email address" >
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputTitle">Title</label>
+                                <select [(ngModel)]="employe.title" class="form-control" id="inputTitle" name="title" placeholder="select statut">
+                                    <option value="chef de projet">Chef de projet</option>
+                                    <option value="employe">Employé</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+
+
+
+                            <!-- Form Row-->
+                            <div class="row gx-3 mb-3">
+                                <!-- Form Group (phone number)-->
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPhone">Phone number</label>
+                                    <input [(ngModel)]="employe.mobile" name="mobile" class="form-control" id="inputPhone" type="tel" placeholder="Enter  phone number">
+                                </div>
+                                <!-- Form Group (birthday)-->
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputBirthday">Birthday</label>
+                                    <input [(ngModel)]="employe.birthday" name="birthday" class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="06.10.1988">
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row gx-3 mb-3">
+                                <!-- Form Group (phone number)-->
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPassword">Password</label>
+                                    <input [(ngModel)]="employe.mdp" name="mdp" class="form-control" id="inputPassword" type="text" placeholder="Enter Password">
+                                </div>
+                                 <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPhoto">Photo URL</label>
+                                    <input [(ngModel)]="employe.photo" name="photo" class="form-control" id="inputPhoto" type="text" name="inputPhoto" placeholder="photo url" >
+                                 </div>
+                            </div>
+
+
+                       
+                           
+                        
+
+
+
+                       
+                        <!-- Form Group (email address)-->
+                       
+                    
+                        <!-- Save changes button-->
+                        <div class="mb-2">
+                            <button class="btn btn-primary" type="submit" value="create" >Add Employee</button>
+                            <a class="btn btn-dark ms-2" routerLink="/EmployesComponent">Close</a>
+                        </div>
+
+                        
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

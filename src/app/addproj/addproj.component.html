@@ -1,0 +1,58 @@
+<app-nvchef></app-nvchef>
+<br>
+<br>
+<br>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+          <h2>Add New Project</h2>
+        </div>
+        <div class="card-body">
+          <form (submit)="createSubmit()">
+            <div class="mb-3">
+              <label for="proj_name" class="form-label">Project Name:</label>
+              <input [(ngModel)]="projet.proj_name" type="text" class="form-control" id="proj_name" name="proj_name" required>
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Description:</label>
+              <textarea [(ngModel)]="projet.desc" class="form-control" id="desc" name="desc" cols="10" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="start_date" class="form-label">Start Date:</label>
+              <input [(ngModel)]="projet.start_date" type="date" class="form-control" id="start_date" name="start_date" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="tasks" class="form-label">Tasks:</label>
+              <textarea [(ngModel)]="projet.tasks" class="form-control" name="tasks" id="tasks" cols="10" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="progress" class="form-label">Progress:</label>
+              <input [(ngModel)]="projet.progress" type="number" class="form-control" id="progress" name="progress" required>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Team:</label>
+              <select [(ngModel)]="projet.team" class="form-select" id="team" [ngModelOptions]="{standalone: true}" multiple>
+                <option *ngFor="let employee of employes" [value]="employee.id">{{employee.name}}</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status:</label>
+              <select [(ngModel)]="projet.status" class="form-select" id="status" name="status" required>
+                <option value="">Select Status</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="On Hold">On Hold</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary m-2" >Add Project</button>
+            
+            <button class="btn btn-dark m-2" routerLink="/ProjlistComponent/{{email}}">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

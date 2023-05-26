@@ -1,0 +1,15 @@
+.form-check-input{
+    position: absolute;
+    right:2rem;
+    height: 2rem;
+    width: 2rem;
+}
+.form-check-input :checked{
+    background-color: green;
+    height: 20rem;
+}
+p{
+    position: absolute;
+    right:5rem;
+    
+}

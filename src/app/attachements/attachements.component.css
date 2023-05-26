@@ -1,0 +1,75 @@
+.attachements{
+    background:linear-gradient(to top,#fefcfc 0%,#fbfbff);
+    height: 15rem;
+    
+}
+.file-man-box {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+   
+  }
+  .file-man-title{
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
+    
+  }
+  .file-img-box {
+    height: 80%;
+    margin-right: 1rem;
+  }
+  
+  .file-img-box img {
+    height: 100%;
+    width: auto;
+  }
+  
+ .file-close{
+    position: relative;
+    bottom: 1.4rem;
+    left:0.1rem;
+    visibility: hidden;
+ }
+  
+  .file-man-title h6 {
+    font-size: 0.7rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .file-man-title p {
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+  .file-download{
+    position: relative;
+    top:4.2rem;
+    left:-1rem
+  }
+  .attachements .col-md-3:hover {
+    height: 7rem;
+    -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02)
+}
+
+.file-man-box:hover .file-close {
+    visibility: visible
+}
+.f{
+ position: relative; left:8rem
+}
+#add{
+  width:8rem;
+  position: relative;
+   top:7rem;
+  left:2rem;
+  background-color: #5a56e9 ;
+  color:white;
+  border: none;
+}
+h4{
+  position: relative;
+  top:2rem ;
+  left:2rem;
+  width:15rem;
+}

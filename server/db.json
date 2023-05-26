@@ -1,0 +1,287 @@
+{
+  "Employees": [
+    {
+      "id": 1,
+      "name": "Sarah ",
+      "email": "sarah.johnson@example.com",
+      "title": "chef de projet",
+      "mobile": "555-1234",
+      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wbG95ZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "mdp": "123",
+      "projects": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "name": "David Martinez",
+      "email": "david.martinez@example.com",
+      "title": "employe",
+      "mobile": "555-5678",
+      "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZW1wbG95ZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "mdp": "123",
+      "projects": [
+        1,
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Catherine Lee",
+      "email": "catherine.lee@example.com",
+      "title": "employe",
+      "mobile": "555-9012",
+      "photo": "https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "mdp": "123",
+      "projects": [
+        6,
+        5,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mohammed Khan",
+      "email": "mohammed.khan@example.com",
+      "title": "chef de projet",
+      "mobile": "555-3456",
+      "photo": "https://images.unsplash.com/photo-1558222218-b7b54eede3f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGVtcGxveWVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "mdp": "123",
+      "projects": [
+        6,
+        5,
+        2,
+        7
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lucie Dubois",
+      "email": "lucie.dubois@example.com",
+      "title": "employe",
+      "mobile": "555-7890",
+      "photo": "https://images.unsplash.com/photo-1573165850883-9b0e18c44bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
+      "mdp": "123",
+      "projects": [
+        5,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Hiroshi Nakamura",
+      "email": "hiroshi.nakamura@example.com",
+      "title": "chef de projet",
+      "mobile": "555-2345",
+      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZW1wbG95ZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "mdp": "123",
+      "projects": [
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "id": 10,
+      "name": "rh  ",
+      "email": "rh.rh@example.com",
+      "title": "rh",
+      "mobile": "555-1234",
+      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wbG95ZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "mdp": "123",
+      "projects": [
+        1,
+        2
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "proj_name": "Redesigning website",
+      "start_date": "2022-06-01",
+      "team": [
+        "1",
+        "2",
+        "3"
+      ],
+      "progress": 20,
+      "status": "In Progress",
+      "tasks": [
+        "Researching competitor websites",
+        "Creating wireframes for new design",
+        "Designing new UI",
+        "Getting user feedback on new design"
+      ],
+      "desc": "This project involves redesigning our company website to improve its user interface and user experience. The project team will conduct research on competitor websites and create wireframes for a new design. The new design will be tested with users for feedback before implementing it on the website."
+    },
+    {
+      "id": 2,
+      "proj_name": " Developing new mobile app",
+      "start_date": "2022-03-15",
+      "team": [
+        "2",
+        "3",
+        "4"
+      ],
+      "progress": 50,
+      "status": "In Progress",
+      "tasks": [
+        "Creating mockups for new app",
+        "Developing app functionality",
+        "Testing app on multiple devices",
+        "Incorporating user feedback"
+      ],
+      "desc": "This project involves developing a new mobile app for our company. The project team will create mockups for the new app, develop its functionality, and test it on multiple devices. User feedback will be incorporated throughout the development process to ensure a high-quality app."
+    },
+    {
+      "id": 3,
+      "proj_name": "Testing software updates",
+      "start_date": "2022-01-01",
+      "team": [
+        "3",
+        "4",
+        "5"
+      ],
+      "progress": 80,
+      "status": "Completed",
+      "tasks": [
+        "Identifying areas for improvement",
+        "Creating test cases for new features",
+        "Conducting manual and automated tests",
+        "Documenting results and reporting to development team"
+      ],
+      "desc": "This project involved testing software updates for our company. The project team identified areas for improvement, created test cases for new features, conducted manual and automated tests, and documented the results. The findings were then reported to the development team for implementation."
+    },
+    {
+      "id": 4,
+      "proj_name": "Implementing new payment system",
+      "start_date": "2022-02-15",
+      "team": [
+        "6",
+        "1",
+        "4"
+      ],
+      "progress": 35,
+      "status": "In Progress",
+      "tasks": [
+        "Researching new payment systems",
+        "Developing integration plan with existing system",
+        "Testing new payment system in sandbox environment",
+        "Training customer service team on new payment system"
+      ],
+      "desc": "This project involves implementing a new payment system for our company. The project team will research new payment systems, develop an integration plan with the existing system, and test the new payment system in a sandbox environment. The customer service team will also be trained on the new payment system."
+    },
+    {
+      "id": 5,
+      "proj_name": "E-commerce website",
+      "start_date": "2022-07-01",
+      "team": [
+        "6",
+        "5",
+        "4",
+        "2"
+      ],
+      "progress": 10,
+      "status": "In Progress",
+      "tasks": [
+        "Creating wireframes for new website",
+        "Developing e-commerce functionality",
+        "Designing new UI",
+        "Testing website on multiple devices"
+      ],
+      "desc": "This project involves creating a new e-commerce website with modern UI and advanced e-commerce functionality. The team is currently in the initial stages of development, including wireframing and UI design."
+    },
+    {
+      "id": 6,
+      "proj_name": "Project Zeta",
+      "start_date": "2022-04-01",
+      "team": [
+        "6",
+        "3",
+        "4"
+      ],
+      "progress": 70,
+      "status": "In Progress",
+      "tasks": [
+        "Developing project plan",
+        "Assigning tasks to team members",
+        "Monitoring progress and making adjustments",
+        "Communicating with stakeholders and reporting progress"
+      ],
+      "desc": "Project Zeta involves developing a new software solution for a client. The team has completed the project plan and is currently working on the implementation phase. The project is progressing well, and the team is working closely with the client to ensure that the final product meets their requirements."
+    },
+    {
+      "proj_name": "E-Learning Platform Development",
+      "tasks": "Designing and implementing the platform's user interface,Developing a content management system,Creating a user authentication system",
+      "desc": "E-learning platform development involves creating a web-based platform that provides learners with access to educational materials and resources. The platform can be designed to support various types of learning, including self-paced learning, instructor-led learning, and blended learning.",
+      "progress": 30,
+      "team": [
+        4,
+        5,
+        6
+      ],
+      "status": "In Progress",
+      "start_date": "2022-12-09",
+      "id": 7
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "topic": "Introduction to javaScript",
+      "date": "2022-05-15",
+      "speaker": "John Doe",
+      "place": "Online",
+      "timedetails": {
+        "start": "08:09",
+        "end": "11:00 PM "
+      },
+      "photo": "https://busyconf.com/blog/images/2013-05-27-speaker.jpg",
+      "description": "Join us for an exciting session on Introduction to JavaScript! Our expert speaker, John Doe, will take you through the fundamentals of this powerful programming language. You'll learn how to create interactive web pages, use JavaScript for web animations, and even build your own web applications. This session is perfect for anyone who is new to programming or wants to refresh their JavaScript skills."
+    },
+    {
+      "id": 2,
+      "topic": "React Native Workshop",
+      "date": "2022-06-12",
+      "speaker": "Jane Smith",
+      "place": "RoomB2",
+      "timedetails": {
+        "start": "1:00 PM ",
+        "end": "4:00 PM "
+      },
+      "photo": "https://www.myadventuregroup.com.au/wp-content/uploads/2022/02/DSC07281_EDITED-1.jpg",
+      "description": "Looking to expand your mobile development skills? Then don't miss this React Native workshop! Our speaker, Jane Smith, will guide you through the basics of React Native, an open-source framework for building mobile apps. You'll learn how to create UI components, work with state and props, and use styling to create beautiful mobile apps. This workshop is suitable for developers with some experience in JavaScript and React."
+    },
+    {
+      "id": 3,
+      "topic": "Introduction to Data Science",
+      "date": "2022-07-17",
+      "speaker": "Dr. David Johnson",
+      "place": "RoomB3",
+      "timedetails": {
+        "start": "9:00 AM",
+        "end": "11:00 AM "
+      },
+      "photo": "https://images.ctfassets.net/hg121nxz9t5c/3lKhSudvB1kkIyXUVhy92t/ff0f796d796585872f34822f6ae0dcb2/Daniel_Krawczyk.jpeg?w=1200&h=630&fm=jpg&fit=fill&f=faces",
+      "description": "Join Dr. David Johnson for an Introduction to Data Science! This session is designed for beginners who want to understand the basics of data science and its applications in various fields. You'll learn about data mining, data cleaning, data visualization, and more. Dr. Johnson will also discuss the latest trends and tools in the field of data science. Don't miss this opportunity to learn from a seasoned expert in the field!"
+    },
+    {
+      "id": 4,
+      "topic": "Agile Project Management",
+      "date": "2022-08-21",
+      "speaker": "Mark Lee",
+      "place": "Online",
+      "timedetails": {
+        "start": "10:00 AM ",
+        "end": "12:00 PM "
+      },
+      "photo": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6869ccdb-3169-41d9-9f05-e4cc81569621.jpg?fit=scale-down&source=next&width=700",
+      "description": "Are you interested in learning about Agile Project Management? Our expert speaker, Mark Lee, will guide you through the Agile methodology and its principles. You'll learn how to manage projects more efficiently, improve team collaboration, and deliver better products. This session is perfect for project managers, team leaders, and anyone who wants to improve their project management skills. Join us online for an interactive session and take your project management skills to the next level!"
+    }
+  ]
+}

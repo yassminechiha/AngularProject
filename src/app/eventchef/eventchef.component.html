@@ -1,0 +1,41 @@
+<app-nvchef></app-nvchef>
+<br>
+<br>
+<div *ngIf="events.length > 0">
+    <section id="blog" class="blog" *ngFor="let event of events">
+      <div class="container" data-aos="fade-up">
+  
+        <div class="row">
+  
+          <div class="col-lg-8 entries">
+  
+            <article class="entry">
+  
+              <div class="entry-img">
+                <img [src]="event.photo" alt="" class="img-fluid">
+              </div>
+  
+              <h2 class="entry-title">
+                <a>{{event.topic}}</a>
+              </h2>
+  
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"> {{event.speaker}}</li>
+                  <li class="d-flex align-items-center"> {{event.date}}</li>
+                  <li class="d-flex align-items-center"> <span *ngIf="event.timedetails">{{ event.timedetails.start }} - {{ event.timedetails.end }}</span>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="entry-content">
+                <p>
+                 {{event.description}}
+                </p>
+         
+  
+              </div>
+  
+            </article><!-- End blog entry -->
+          </div>
+  

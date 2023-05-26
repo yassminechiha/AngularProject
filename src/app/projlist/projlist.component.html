@@ -1,0 +1,128 @@
+<app-nvchef></app-nvchef>
+<br>
+<br>
+<br>
+<br>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-header bg-primary text-white">
+            <h2>Project List</h2>
+          </div>
+          <div class="table-responsive project-list">
+            <table class="table project-table table-centered table-nowrap">
+              <thead>
+                <tr>
+                  <th scope="col">Project Name</th>
+
+                  <th scope="col">Start Date</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Team</th>
+
+                  <th scope="col">Progress</th>
+
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+
+              <tbody *ngIf="projetsData.length > 0">
+                <tr *ngFor="let projet of projetsData; let i = index">
+
+                  <td>{{ projet.proj_name }}</td>
+
+                  <td>{{ projet.start_date }}</td>
+
+                  <td>
+                    <span class="text-primary font-12"
+                      ><i class="mdi mdi-checkbox-blank-circle mr-1"></i>
+
+                      {{ projet.status }}</span
+                    >
+                  </td>
+
+                  <td >
+                    <div  class="team">
+                      <a
+                        class="team-member"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        data-original-title="Roger Drake"
+                      >
+                        <div *ngIf="projet.team" style="display: flex">
+                          <img *ngFor="let photo of photosByProject[i]"
+                            [src]="photo"
+                            class="rounded-circle avatar-xs"
+                            alt=""
+                          />
+                        </div>
+                      </a>
+                    </div>
+                  </td>
+
+                  <td>
+                    <p class="mb-0">
+                      Progress<span class="float-right">{{
+                        projet.progress
+                      }}</span>
+                    </p>
+
+                    <div class="progress mt-2" style="height: 5px">
+                      <div
+                        class="progress-bar bg-primary"
+                        role="progressbar"
+                        [style.width.%]="projet.progress"
+                        aria-valuenow="100"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="action">
+                      <a
+                        href="#"
+                        class="text-success mr-4"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title=""
+                        data-original-title="Edit"
+                        [routerLink]="['../', email, 'edit', projet.id]"
+
+                      >
+                        <i class="fa fa-pencil h5 m-0"></i
+                      ></a>
+                      <a
+                        class="text-danger"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title=""
+                        data-original-title="Close"
+                      >
+                        <i class="fa fa-remove h5 m-0" (click)="clickDeleteProject(projet.id?.toString())" routerLink=""></i
+                      ></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

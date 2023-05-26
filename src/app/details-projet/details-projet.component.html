@@ -1,0 +1,76 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<app-navbar-employee></app-navbar-employee>
+<br>
+<div class="conatiner mt-5 blog">
+    <div class="card entry c offset-1">
+        <div class="row mt-1 ">
+            <div class="col-5 offset-4 " style="  font-size: 28px;
+            font-weight: bold;
+          color: #4154f1;">
+                {{projet?.proj_name}}
+            </div>
+        
+        </div>
+        <div class="row blog mt-4" >
+            <div class="col-6   ">
+                <div class="card task  ">
+                    <div class=" card-header"  style="background-color: #4154f1; color:white;  " >Project tasks</div>
+                   <div *ngFor="let t of tasks" class="mt-1">
+                     <input type="checkbox" id="myCheckbox" name="myCheckbox" value="isChecked" style="position:relative;top:0.4rem; left:32rem;height:1.8rem; width:2rem">
+                    <label  for="myCheckbox">{{t}}</label>
+                    
+                   </div>
+                  
+                </div>
+            </div>
+            <div class="col-5 offset-1 blog " style="padding: 0;">
+                <div class="card entry ">
+                    <div class="row">
+                
+                    <div class="col-12">
+                    <div class="entry-content">
+                        {{projet?.desc}}
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+       
+
+    </div>
+    
+    <div class="row blog entry mt-5 " >
+        <h3 class="entry-title">Team</h3>
+       <div class="card">
+       
+    <div class="card-body">
+        <table class="table  table-responsive">
+            <thead>
+               
+                <tr>
+                <th>Employee</th>
+                <th>Email</th>
+                <th>status</th>
+            </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let team of teamsEmail | keyvalue">
+                  <td>
+                    <img [src]="team.value.photo" class="img">
+                  </td>
+                  <td >
+                    {{team.value.email}}
+                  </td>
+                  <td>
+                    {{team.value.title}}
+                  </td>
+                </tr>
+              </tbody>
+              
+        </table>
+       </div>
+    </div>
+</div>
+    </div>
+</div>

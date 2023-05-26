@@ -1,0 +1,115 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link active ms-0" >Event</a>
+
+    </nav>
+    <hr class="mt-0 mb-4">
+
+    
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-header">Event Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-fluid mb-2" style="height: 15rem; width:15rem;" [src]="event.photo" alt="">
+                    <!-- Profile picture help block-->
+                    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+          
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                <div class="card-header">Event Details</div>
+                <div class="card-body">
+                    <form (submit)="createSubmit()">
+                        <!-- Form Group (username)-->
+                        <div class="mb-3">
+                            <label  class="small mb-1" for="inputUsername">Topic </label>
+                            <input [(ngModel)]="event.topic" name="name" required="true" value="event.topic"
+                             class="form-control" id="inputUsername" type="text" >
+                        </div>
+
+                             <!-- Form Row-->
+                             <div class="row gx-3 mb-3">
+                              <!-- Form Group (phone number)-->
+                                      <div class="col-md-6">
+                                             <label class="small mb-1" for="inputPhone">Speaker</label>
+                                             <input [(ngModel)]="event.speaker" required="true" value="event.speaker"  name="mobile" class="form-control" id="inputPhone" type="tel" >
+                                        </div>
+                                            <!-- Form Group (birthday)-->
+                                            <div class="col-md-6">
+                                            <label class="small mb-1" for="inputBirthday">Date</label>
+                                             <input [(ngModel)]="event.date" required="true" value="event.date"  name="birthday" class="form-control" id="inputBirthday" type="date" name="birthday" >
+                                            </div>
+                                </div>
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (phone number)-->
+                            <div class="col-md-6">
+                                
+                                <label class="small mb-1" for="ts">Start time</label>
+                                <input [(ngModel)]="event.timedetails.start" required="true" value="event.timedetails.start" name="ts"class="form-control" id="ts" type="time">
+                            </div>
+                        <!-- Form Group (birthday)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="te">End time</label>
+                            <input [(ngModel)]="event.timedetails.end" required="true" value="event.timedetails.end" name="te"class="form-control" id="te" type="time">
+                            
+                           
+                        </div>
+                            
+                        </div>
+
+
+
+
+
+
+
+
+
+                            <div class="row gx-3 mb-3">
+                                <!-- Form Group (phone number)-->
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPassword">Place</label>
+                                    <input [(ngModel)]="event.place" required="true"  name="mdp" class="form-control" id="inputPassword" type="text" >
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="fo">Speaker picture</label>
+                                    <input [(ngModel)]="event.photo" required="true"  name="fo" class="form-control" id="fo" type="text" >
+                                </div>
+
+                            </div>
+
+
+                       
+                           
+                        
+
+
+
+                       
+                        <!-- Form Group (email address)-->
+                       
+                    
+                        <!-- Save changes button-->
+                        <div class="mb-2">
+                         <button class="btn btn-primary" type="submit" value="create" >Add Event</button>
+                         <a class="btn btn-dark ms-2" routerLink="/events">Close</a>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

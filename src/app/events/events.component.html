@@ -1,0 +1,61 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<app-navbar></app-navbar>
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <ol>
+        <li><a routerLink="/">Home</a></li>
+        <li>Events</li>
+      </ol>
+      <h2>Events</h2>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Blog Section ======= -->
+  <div *ngIf="events.length > 0">
+  <section id="blog" class="blog" *ngFor="let event of events">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+
+        <div class="col-lg-8 entries">
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img [src]="event.photo" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a>{{event.topic}}</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"> {{event.speaker}}</li>
+                <li class="d-flex align-items-center"> {{event.date}}</li>
+                <li class="d-flex align-items-center"> <span *ngIf="event.timedetails">{{ event.timedetails.start }} - {{ event.timedetails.end }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+               {{event.description}}
+              </p>
+              <div class="read-more" >
+                <a routerLink="../editevent/{{event.id}}">Edit event</a>
+              
+
+              
+                <a (click)="clickDeleteEvent(event.id?.toString())" style="margin-top: 20px; margin-left: 30px;">delete event</a>
+              </div>
+
+            </div>
+
+          </article><!-- End blog entry -->
+        </div>
